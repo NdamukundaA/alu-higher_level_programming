@@ -1,11 +1,15 @@
-import requests
-import sys
+#!/usr/bin/python3
+"""
+Module 5-hbtn_header.py
+"""
 
-def main():
-    url = sys.argv[1]
-    response = requests.get(url)
-    print(response.headers.get('X-Request-Id'))
+
+from sys import argv
+import requests
+
 
 if __name__ == "__main__":
-    main()
-
+    url = argv[1]
+    le = requests.get(url)
+    la = le.headers.get('X-Request-Id')
+    print(la)
